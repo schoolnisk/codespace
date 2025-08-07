@@ -27,5 +27,13 @@
         "features": {
             "tailscale": {}
         }
+    },
+    "tailscale_operator": {
+        "image": "ubuntu:latest",
+        "features": {
+            "tailscale": {
+                "operator": "$USER"
+            }
+        }
     }
 }
