@@ -13,4 +13,6 @@ if [[ -n "$VERSION" ]]; then
     check "version is correct" bash -c "tailscale version --daemon | grep -q $VERSION"
 fi
 
+check "operator flag is not set" bash -c "! pgrep -f '--operator=$(id -un)'"
+
 reportResults
